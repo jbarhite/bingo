@@ -13,11 +13,13 @@
 
 		.container {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			align-items: center;
+			margin-top: 20px;
 		}
 
 		.display {
+			flex: 1;
 			font-size: 36px;
 			text-align: center;
 			margin-bottom: 20px;
@@ -26,6 +28,8 @@
 		.previous-numbers {
 			font-size: 24px;
 			text-align: right;
+			flex: 1;
+			max-width: 20%;
 		}
 
 		.progress-bar {
@@ -66,11 +70,12 @@
 		<div class="display">
 			<!-- Math problem or current item displayed here -->
 			<!-- Example: <span id="current-item">3 + 5</span> -->
+			<span id="current_item">3 + 5</span>
 		</div>
 
 		<div class="previous-numbers">
 			<!-- Previously called numbers displayed here -->
-			<!-- Example: <span id="called-numbers">B3, I18, N32</span> -->
+			<span id="called-numbers">B3, I18, N32</span>
 		</div>
 
 		<div class="progress-bar">
