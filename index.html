@@ -4,6 +4,13 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bingo Game</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-GvrOXuhMATgEsSwCs4smul74iXGOixntILdUW9XmUC6+HX0sLNAK3q71HotJqlAn" crossorigin="anonymous">
+	<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-cpW21h6RZv/phavutF+AuVYrr+dA8xD9zs6FwLpaCct6O9ctzYFfFr4dgmgccOTx" crossorigin="anonymous"></script>
+
+	<script src="questions.js"></script>
+	<script src="bingo.js"></script>
+
 	<style>
 
 		body {
@@ -64,13 +71,12 @@
 	</style>
 </head>
 
-<body>
+<body onload="initialize()" onclick="next()">
 
 	<div class="container">
 		<div class="display">
-			<!-- Math problem or current item displayed here -->
-			<!-- Example: <span id="current-item">3 + 5</span> -->
-			<span id="current_item">3 + 5</span>
+			<span id="current_column"></span>
+			<span id="current_question"></span>
 		</div>
 
 		<div class="previous-numbers">
