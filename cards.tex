@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{array}
+
+\def\mystrut(#1,#2){\vrule height #1 depth #2 width 0pt}
+\newcolumntype{C}[1]{>{\mystrut(1.8cm,1.5cm)\centering\arraybackslash}p{#1}<{\arraybackslash}}
+
+\newcommand{\cardrow}[5]{#1 & #2 & #3 & #4 & #5 \\ \hline}
+\newcommand{\card}[6]{
+Card \##1
+\bigskip
+\begin{center}
+	\begin{tabular}{|*{5}{C{2.75cm}|}}
+	    \hline
+		#2 #3 #4 #5 #6
+	\end{tabular}
+\end{center}
+\pagebreak
+}
+
+
+\begin{document}
+
+
+
+
+\end{document}
