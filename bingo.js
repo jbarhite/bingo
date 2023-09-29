@@ -5,21 +5,22 @@ timer = null;
 timeRemaining = 0; // in milliseconds
 totalTime = 0; // in milliseconds
 
-question = 14;
+currentColumn = 0;
+currentQuestion = 0;
 questionHistory = [];
 
 
-function startQuestion(column, number) {
+function startQuestion() {
 	// display the question and record it
-	katex.render(questions[column][number], document.querySelector('.current_question'), {
+	katex.render(questions[currentColumn][currentQuestion], document.querySelector('.current_question'), {
 		displayMode: true,
 	    throwOnError: false
 	});
-	document.querySelector('.current_column').innerHTML = "BINGO"[column]
-	questionHistory.push([column, number]);
+	document.querySelector('.current_column').innerHTML = "BINGO"[currentColumn]
+	questionHistory.push([currentColumn, currentQuestion]);
 
 	// start timer
-	totalTime = TIME_PER_QUESTION[column] * 1000;
+	totalTime = TIME_PER_QUESTION[currentColumn] * 1000;
 	timeRemaining = totalTime;
 	if (timer != null) clearInterval(timer);
 	timer = setInterval(updateTimer, TIME_STEP);
@@ -34,6 +35,19 @@ function updateTimer() {
 }
 
 function next() {
+	// select the next question randomly
+	options = []
+	for (let c=0; c<5; c++) {
+		for (let q=0; q<15; q++) {
+			if (!questionHasBeenShown(c, q)) options.push([c, q]);
+		}
+	}
+	if (options.length == 0) return
+	selection = options[Math.floor(Math.random() * options.length)];
+	currentColumn = selection[0];
+	currentQuestion = selection[1];
+
+	// update the displayed list of previous questions
 	if (questionHistory.length > 0) {
 		const previousNumbersDiv = document.querySelector('.previous-numbers');
 		const newSpan = document.createElement('span');
@@ -44,9 +58,7 @@ function next() {
 		previousNumbersDiv.insertBefore(newSpan, previousNumbersDiv.firstChild);
 	}
 
-	question++;
-	if (question >= 15) question = 0;
-	startQuestion(0, question);
+	startQuestion();
 }
 
 function pause() {
@@ -112,9 +124,9 @@ function checkCard() {
 	});
 }
 
-function questionHasBeenShown(c, r) {
-	for (let q of questionHistory) {
-		if (q[0] == c && q[1] == r) return true
+function questionHasBeenShown(c, q) {
+	for (let question of questionHistory) {
+		if (question[0] == c && question[1] == q) return true
 	}
 	return false
 }
