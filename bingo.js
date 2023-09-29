@@ -12,7 +12,7 @@ questionHistory = [];
 
 function startQuestion() {
 	// display the question and record it
-	katex.render(questions[currentColumn][currentQuestion], document.querySelector('.current_question'), {
+	katex.render(questions[currentColumn][currentQuestion][0], document.querySelector('.current_question'), {
 		displayMode: true,
 	    throwOnError: false
 	});
@@ -42,6 +42,7 @@ function next() {
 			if (!questionHasBeenShown(c, q)) options.push([c, q]);
 		}
 	}
+
 	if (options.length == 0) return
 	selection = options[Math.floor(Math.random() * options.length)];
 	currentColumn = selection[0];
@@ -52,7 +53,7 @@ function next() {
 		const previousNumbersDiv = document.querySelector('.previous-numbers');
 		const newSpan = document.createElement('span');
 		const prevQuestion = questionHistory[questionHistory.length - 1];
-		katex.render(questions[prevQuestion[0]][prevQuestion[1]], newSpan, {
+		katex.render(questions[prevQuestion[0]][prevQuestion[1]][0], newSpan, {
 			throwOnError: false
 		});
 		previousNumbersDiv.insertBefore(newSpan, previousNumbersDiv.firstChild);
