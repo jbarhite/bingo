@@ -65,6 +65,7 @@ function resume() {
 function openCardCheckModal() {
 	pause();
 	clearCardCheck();
+	document.getElementById('bingoCardNumber').value = '';
 	const modal = document.getElementById('card-check');
 	modal.style.display = 'block';
 }
@@ -72,6 +73,16 @@ function openCardCheckModal() {
 function closeCardCheckModal() {
 	const modal = document.getElementById('card-check');
 	modal.style.display = 'none';
+}
+
+function onClickSquare(event) {
+	if (event.target.classList.contains('selected')) {
+		event.target.classList.remove('selected');
+	} else if (event.target.classList.contains('verified')) {
+		event.target.classList.remove('verified');
+	} else {
+		event.target.classList.add('selected');
+	}
 }
 
 function clearCardCheck() {
@@ -82,28 +93,43 @@ function clearCardCheck() {
 }
 
 function checkCard() {
-	document.querySelectorAll('.bingo-square.selected').forEach((square) => {
-		square.classList.remove('selected');
-		square.classList.add('verified');
+	cardID = parseInt(document.getElementById('bingoCardNumber').value);
+	if (isNaN(cardID) || cardID < 0 || cardID >= cards.length) {
+		alert("Invalid card number.");
+		return
+	}
+
+	document.querySelectorAll('.bingo-square.selected, .bingo-square.verified').forEach((square) => {
+		c = parseInt(square.id.substring(7, 8));
+		r = parseInt(square.id.substring(9, 10));
+		if ((c == 2 && r == 2) || questionHasBeenShown(c, cards[cardID][c][r])) {
+			square.classList.remove('selected');
+			square.classList.add('verified');
+		} else {
+			square.classList.remove('verified');
+			square.classList.add('selected');
+		}
 	});
+}
+
+function questionHasBeenShown(c, r) {
+	for (let q of questionHistory) {
+		if (q[0] == c && q[1] == r) return true
+	}
+	return false
 }
 
 function initialize() {
 	// Create squares in card check modal
 	const grid = document.querySelector('.bingo-grid');
-	for (let i=0; i<25; i++) {
-		const square = document.createElement('div');
-		square.className = 'bingo-square';
-		grid.appendChild(square);
-
-		square.addEventListener('click', function(event) {
-			if (event.target.classList.contains('selected')) {
-				event.target.classList.remove('selected');
-			} else if (event.target.classList.contains('verified')) {
-				event.target.classList.remove('verified');
-			} else {
-				event.target.classList.add('selected');
-			}
-		});
+	for (let c=0; c<5; c++) {
+		for (let r=0; r<5; r++) {
+			const square = document.createElement('div');
+			square.className = 'bingo-square';
+			square.id = 'square-' + c + '-' + r;
+			square.style.order = 5 * r + c;
+			grid.appendChild(square);
+			square.addEventListener('click', onClickSquare);
+		}
 	}
 }
