@@ -128,3 +128,25 @@ cards = [
 	[[3, 4, 5, 10, 11], [0, 1, 2, 5, 14], [3, 6, null, 7, 14], [2, 4, 6, 10, 12], [0, 1, 2, 3, 14]],
 	[[4, 5, 10, 11, 13], [1, 4, 8, 13, 14], [1, 3, null, 4, 11], [9, 10, 12, 13, 14], [7, 8, 10, 11, 13]]
 ];
+
+
+function printCards() {
+	s = "";
+	for (let i=0; i<cards.length; i++) {
+		s += "\\cardnumber{" + i + "}<br>";
+		s += "\\begin{center}<br>\\begin{tabular}{|*{5}{c|}}<br>";
+		s += "&nbsp;&nbsp;&nbsp;&nbsp;\\hline<br>";
+		for (let r=0; r<5; r++) {
+			s += "&nbsp;&nbsp;&nbsp;&nbsp;";
+			for (let c=0; c<5; c++) {
+				if (r == 2 && c == 2) s += "\\freespace";
+				else s += "\\entry{$" + questions[c][cards[i][c][r]][1] + "$}";
+				if (c < 4) s += " &amp; ";
+			}
+			s += " \\\\ \\hline<br>";
+		}
+		s += "\\end{tabular}<br>\\end{center}";
+		if (i < cards.length - 1) s += "<br><br>\\pagebreak<br><br>";
+	}
+	return s
+}

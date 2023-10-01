@@ -1,27 +1,1809 @@
 \documentclass{article}
-\usepackage[margin=1in]{geometry}
+\usepackage[landscape, margin=0.75in]{geometry}
 \usepackage{array}
 
-\def\mystrut(#1,#2){\vrule height #1 depth #2 width 0pt}
-\newcolumntype{C}[1]{>{\mystrut(1.8cm,1.5cm)\centering\arraybackslash}p{#1}<{\arraybackslash}}
+\pagestyle{empty}
 
-\newcommand{\cardrow}[5]{#1 & #2 & #3 & #4 & #5 \\ \hline}
-\newcommand{\card}[6]{
-Card \##1
-\bigskip
-\begin{center}
-	\begin{tabular}{|*{5}{C{2.75cm}|}}
-	    \hline
-		#2 #3 #4 #5 #6
-	\end{tabular}
-\end{center}
-\pagebreak
-}
+\newcommand{\entry}[1]{\begin{minipage}[t][2.75cm][t]{4cm} \vspace{1cm} \begin{center}#1\end{center} \end{minipage}}
+\newcommand{\freespace}{\entry{FREE}}
+\newcommand{\cardnumber}[1]{\noindent \textbf{Card number: #1} \bigskip}
 
 
 \begin{document}
 
 
+\renewcommand{\arraystretch}{2}
+
+
+\cardnumber{0}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-11$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{1}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$5x^{2/3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{2}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$\sec^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-5 \sin x + 8$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$0$} & \entry{$-\sin x + 2e^x$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{3}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$7 \cos x + \sin x$} & \entry{$x e^x + e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{4}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$7 \cos x + \sin x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{5}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-11$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$8x + 4$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{6}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{7}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\sin x + 2e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{8}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$-24x^2 + 19$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$7 \cos x + \sin x$} & \entry{$8x + 4$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{9}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \entry{$8x + 4$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{10}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$18x$} & \entry{$5x^{2/3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$8x + 4$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{11}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-11$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{12}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$2e^{2x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$30x$} & \entry{$7 \cos x + \sin x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{13}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$-11$} & \entry{$8x^3 - 6x$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x e^x + e^x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{14}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \freespace & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{15}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{16}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{17}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{8}{x^3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$8x + 4$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{18}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$-11$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$8x + 4$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{19}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$18x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{20}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x e^x + e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{21}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec x \tan x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$3e^x$} & \entry{$-5 \sin x + 8$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{22}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$4x + 5e^x$} & \entry{$\sec^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{23}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$7 \cos x + \sin x$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-11$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{24}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$x e^x + e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{25}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$7 \cos x + \sin x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$2x + 2$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{26}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$7 \cos x + \sin x$} & \entry{$\sec^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$-\csc^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$-\csc x \cot x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{27}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$5x^{2/3}$} & \entry{$\sec x \tan x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{28}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-24x^2 + 19$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \entry{$-\csc^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-11$} & \entry{$5x^{2/3}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{29}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$4x + 5e^x$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$2$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-11$} & \entry{$5x^{2/3}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{30}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$3e^x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$5x^{2/3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x e^x + e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{31}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$\sec x \tan x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$2e^{2x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{32}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{8}{x^3}$} & \entry{$8x + 4$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{33}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$4x + 5e^x$} & \entry{$-\csc^2 x$} & \entry{$2e^{2x}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{34}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$7 \cos x + \sin x$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{35}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$-11$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \entry{$-\csc x \cot x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{8}{x^3}$} & \entry{$x e^x + e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{36}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$-\csc^2 x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x e^x + e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{37}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$2e^{2x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{38}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-5 \sin x + 8$} & \entry{$2x + 2$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{39}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{3}{x^2}$} & \entry{$x e^x + e^x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$8x + 4$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-11$} & \entry{$5x^{2/3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{40}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$-11$} & \entry{$3x^2 + 4x - 4$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$8x^3 - 6x$} & \entry{$8x + 4$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{3}{x^2}$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$4x + 5e^x$} & \entry{$2x + 2$} & \entry{$2e^{2x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{41}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$18x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{42}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \entry{$x e^x + e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{43}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$7 \cos x + \sin x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{44}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$18x$} & \entry{$7 \cos x + \sin x$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{45}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$\sec^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{46}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec x \tan x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$5x^{2/3}$} & \entry{$x e^x + e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{47}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$4x + 5e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$2x + 2$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{48}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$5x^{2/3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{49}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$4x + 5e^x$} & \entry{$8x + 4$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{50}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{51}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$4x + 5e^x$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x e^x + e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{52}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$7 \cos x + \sin x$} & \entry{$x e^x + e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{53}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$2e^{2x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{54}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$4x + 5e^x$} & \entry{$-\csc x \cot x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$8x^7$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$8x + 4$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{55}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{56}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$8x^7$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{8}{x^3}$} & \entry{$\sec x \tan x$} & \entry{$-\frac{x}{e^x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{57}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{58}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$x e^x + e^x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \entry{$8x + 4$} & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{59}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{8}{x^3}$} & \entry{$\sec x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{60}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-11$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$2e^{2x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{61}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$18x$} & \entry{$7 \cos x + \sin x$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$5x^{2/3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{62}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$-11$} & \entry{$3x^2 + 4x - 4$} & \entry{$x e^x + e^x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$8x^3 - 6x$} & \entry{$2x + 2$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-2e^x$} & \entry{$4x + 5e^x$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{63}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$4x + 5e^x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-5 \sin x + 8$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{64}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\sin x + 2e^x$} & \entry{$-\csc x \cot x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$5x^{2/3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{65}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$4x + 5e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \entry{$2x + 2$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{66}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{67}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$4x + 5e^x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$7 \cos x + \sin x$} & \entry{$-\csc^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$8x + 4$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{68}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$-11$} & \entry{$8x^3 - 6x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$5x^{2/3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{69}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$x e^x + e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{70}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{71}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-24x^2 + 19$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{72}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{73}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-24x^2 + 19$} & \entry{$-\csc^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$5x^{2/3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{74}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$\sec x \tan x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{75}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{76}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$18x$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-24x^2 + 19$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$2e^{2x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{77}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-11$} & \entry{$4x + 5e^x$} & \entry{$8x + 4$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{78}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\sin x + 2e^x$} & \entry{$2x + 2$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{79}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$2e^{2x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-2e^x$} & \entry{$5x^{2/3}$} & \entry{$8x + 4$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{80}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$7 \cos x + \sin x$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{81}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$30x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$5x^{2/3}$} & \entry{$x e^x + e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{82}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{83}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc x \cot x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-5 \sin x + 8$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{84}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$4x + 5e^x$} & \entry{$-\csc^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$-\csc x \cot x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{85}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$8x + 4$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{86}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$5x^{2/3}$} & \entry{$8x + 4$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{87}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$8x + 4$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{88}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-24x^2 + 19$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{89}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$5x^{2/3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{90}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$4x + 5e^x$} & \entry{$x e^x + e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$30x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$5x^{2/3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{91}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$\sec x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$4x + 5e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$18x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{92}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-24x^2 + 19$} & \entry{$x e^x + e^x$} & \entry{$3x^2 + 6x + 3$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-5 \sin x + 8$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$-\sin x + 2e^x$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{93}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$-11$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{94}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-11$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{95}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x e^x + e^x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$5x^{2/3}$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{96}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$5x^{2/3}$} & \entry{$8x + 4$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{97}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{98}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$x e^x + e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-11$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\sin x + 2e^x$} & \entry{$2x + 2$} & \entry{$2e^{2x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{99}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$18x$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{100}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x^2$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{101}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \entry{$x e^x + e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{102}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$5x^4$} & \entry{$7 \cos x + \sin x$} & \entry{$\sec x \tan x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{103}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec x \tan x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$2e^{2x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{104}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-\frac{8}{x^3}$} & \entry{$\sec x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{105}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \entry{$x e^x + e^x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$-5 \sin x + 8$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$0$} & \entry{$-\sin x + 2e^x$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{106}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$8x^3 - 6x$} & \entry{$\sec x \tan x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$5x^{2/3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$8x + 4$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{107}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x$} & \entry{$4x + 5e^x$} & \entry{$-\csc^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{108}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec x \tan x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$5x^{2/3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{109}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc x \cot x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-24x^2 + 19$} & \entry{$8x + 4$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{110}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$3x^2 + 4x - 4$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \entry{$-\csc x \cot x$} & \entry{$-\frac{x}{e^x}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\sin x + 2e^x$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{111}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$-11$} & \entry{$4x + 5e^x$} & \entry{$\sec^2 x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$-\csc x \cot x$} & \entry{$-\frac{x}{e^x}$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$\sec x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{112}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$18x$} & \entry{$7 \cos x + \sin x$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$0$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$2x + 2$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{113}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$2$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$x^2 e^x + 2x e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{114}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$-\csc x \cot x$} & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$\sec x \tan x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x e^x + e^x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{115}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$8x^3 - 6x$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{x^2 + 2x - 1}{(x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x^2$} & \entry{$-5 \sin x + 8$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{116}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \entry{$-\csc^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$18x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$\sec x \tan x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$0$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$8x + 4$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{117}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$5x^4$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$4x + 5e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\sin x + 2e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-8x^3$} & \entry{$5x^{2/3}$} & \entry{$2x + 2$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$\cos x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{118}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$5x^{2/3}$} & \entry{$-\csc x \cot x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$-2e^x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$8x + 4$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{119}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$8x^3 - 6x$} & \entry{$-\csc x \cot x$} & \entry{$5x^4 + 6x^2 + 2x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$5x^{2/3}$} & \entry{$\sec x \tan x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{8}{x^3}$} & \freespace & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x e^x + e^x$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{120}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$-\csc^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$2$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{8}{x^3}$} & \entry{$x e^x + e^x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-\frac{1}{x^2} - \frac{2}{x^3}$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$(2x + 3) e^x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{121}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$8x^7$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec^2 x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$30x^2$} & \entry{$4x + 5e^x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$\cos x$} & \entry{$5x^{2/3}$} & \freespace & \entry{$2e^{2x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\frac{8}{x^3}$} & \entry{$8x + 4$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$2x + 2$} & \entry{$(2x + 3) e^x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{122}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$-\frac{3}{x^2}$} & \entry{$\sec^2 x$} & \entry{$(x^2 + 4x + 3) e^x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$18x$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$\sec x \tan x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x$} & \entry{$6x - \frac{2}{x^2}$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$e^x \left(\sqrt{x} + \frac{1}{2\sqrt{x}}\right)$} \\ \hline
+    \entry{$3e^x$} & \entry{$-\frac{8}{x^3}$} & \entry{$2x + 2$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{123}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$2 \cos x - 3 \sin x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-8x^3$} & \entry{$4x + 5e^x$} & \freespace & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$-\sin x + 2e^x$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$(2x + 1) \cos x + 2 \sin x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{124}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$3x^2 + 4x - 4$} & \entry{$\sec^2 x$} & \entry{$3x^2 + 6x + 3$} & \entry{$\frac{(2x - 1) e^x}{(2x + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-24x^2 + 19$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$\cos^2 x - \sin^2 x$} & \entry{$\frac{\frac{1}{2 \sqrt{x}} - \frac{\sqrt{x}}{2}}{(x + 1)^2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$5x^{2/3}$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$3e^x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$e^x \cos x + e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$2 \tan x \sec^2 x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{125}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$4x^3$} & \entry{$-\frac{3}{x^2}$} & \entry{$x^2 \cos x + 2x \sin x$} & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$5x^4$} & \entry{$-\frac{1}{2} x^{-3/2}$} & \entry{$x^3 e^x + 3x^2 e^x$} & \entry{$\frac{x \cos x - \sin x}{x^2}$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$8x^7$} & \entry{$-24x^2 + 19$} & \freespace & \entry{$\frac{x \sin x + \cos x - 1}{x^2}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$30x$} & \entry{$7 \cos x + \sin x$} & \entry{$2x + 2$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$30x^2$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{126}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$100x^{99}$} & \entry{$3x^2 + 4x - 4$} & \entry{$-\csc x \cot x$} & \entry{$4x^3 + 12x^2 + 12x + 4$} & \entry{$\frac{2x e^x - (x^2 + 1) e^x}{e^{2x}}$} \\ \hline
+    \entry{$2$} & \entry{$8x^3 - 6x$} & \entry{$2x \cos x - x^2 \sin x$} & \entry{$(x + 1)^2 \cos x + (2x + 2) \sin x$} & \entry{$\frac{-x^2 - 2x + 1}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-11$} & \entry{$-\frac{3}{x^2}$} & \freespace & \entry{$\sin x \sec^2 x + \sin x$} & \entry{$\frac{-2x^2 + 2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$\cos x$} & \entry{$-24x^2 + 19$} & \entry{$x^2 \sec^2 x + 2x \tan x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{2x^2 - 2}{(x + 1)^4}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$e^x \cos x - e^x \sin x$} & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\sin^2 x + 2x \sin x \cos x$} \\ \hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+
+\cardnumber{127}
+\begin{center}
+\begin{tabular}{|*{5}{c|}}
+    \hline
+    \entry{$2$} & \entry{$8x^3 - 6x$} & \entry{$\sec^2 x$} & \entry{$2e^{2x}$} & \entry{$\sqrt{x} \cos x + \frac{\sin x}{2 \sqrt{x}}$} \\ \hline
+    \entry{$-11$} & \entry{$6x - \frac{2}{x^2}$} & \entry{$-\csc x \cot x$} & \entry{$-\frac{x}{e^x}$} & \entry{$\frac{\cos x}{2 \sqrt{x}} - \sqrt{x} \sin x$} \\ \hline
+    \entry{$\cos x$} & \entry{$-5 \sin x + 8$} & \freespace & \entry{$-(2x + 1) \sin x + 2 \cos x$} & \entry{$\frac{1}{2} x^{1/2} - \frac{1}{2} x^{-3/2}$} \\ \hline
+    \entry{$-\sin x$} & \entry{$\frac{1}{3\sqrt[3]{x^2}}$} & \entry{$\sec x \tan x$} & \entry{$\frac{3}{2} \sqrt{x}$} & \entry{$\frac{1 - x^2}{(x^2 + 1)^2}$} \\ \hline
+    \entry{$-2e^x$} & \entry{$\frac{1}{2\sqrt{x}} - 5x^4$} & \entry{$8x + 4$} & \entry{$(2x + 3) e^x$} & \entry{$\sec^2 x + e^x$} \\ \hline
+\end{tabular}
+\end{center}
 
 
 \end{document}
